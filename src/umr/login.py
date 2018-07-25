@@ -1,11 +1,8 @@
 import requests
 from flask import Blueprint, request, render_template, redirect, url_for, make_response
-from .articles import get_articles_page
-from umr.constants import ZEEGUU_COOKIE_SESSION_KEY
+from umr.articles import get_articles_page
+from umr.constants import ZEEGUU_COOKIE_SESSION_KEY, ZEEGUU_API_URL
 
-# note that
-ZEEGUU_WEB_URL = "https://zeeguu.unibe.ch/"
-ZEEGUU_API_URL = "https://zeeguu.unibe.ch/api"
 STATUS_ACCEPT = 200
 
 endpoints_login = Blueprint('endpoints_login', __name__, template_folder='templates')
