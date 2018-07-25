@@ -1,0 +1,1 @@
+ZEEGUU_COOKIE_SESSION_KEY = "sessionID"
