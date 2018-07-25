@@ -27,7 +27,7 @@ else
 	sed -i.bak "s/$DEFAULT_ZEEGUU_API_ESCAPED/$ZEEGUU_API_URL_ESCAPED/g" src/umr/static/scripts/app/zeeguuRequests.js
 
 	echo "config line in zeeguuRequests.js"
-	cat src/umr/static/scripts/app/zeeguuRequests.js | grep "const ZEEGUU_SERVER"	
+	cat src/umr/static/scripts/app/zeeguuRequests.js | grep "const ZEEGUU_API_URL"
 
 fi
 
@@ -41,6 +41,6 @@ else
 	echo "... changed the API url back to $DEFAULT_ZEEGUU_API"
 
 	echo "config line in zeeguuRequests.js"
-	cat src/umr/static/scripts/app/zeeguuRequests.js | grep "const ZEEGUU_SERVER"
+	cat src/umr/static/scripts/app/zeeguuRequests.js | grep "const ZEEGUU_API_URL"
 
 fi

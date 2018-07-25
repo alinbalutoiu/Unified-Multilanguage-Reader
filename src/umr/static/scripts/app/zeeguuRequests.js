@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const ZEEGUU_SERVER = 'https://zeeguu.unibe.ch/api';
+const ZEEGUU_API_URL = 'https://zeeguu.unibe.ch/api';
 const ZEEGUU_SESSION = 'sessionID';
 
 /** Get a list of recommended feeds. */
@@ -130,7 +130,7 @@ export default class ZeeguuRequests {
     static get (endpoint, requestData, responseHandler = function() {}) {
         requestData.session = this.session();
         $.get(
-            ZEEGUU_SERVER + endpoint,
+            ZEEGUU_API_URL + endpoint,
             requestData,
             responseHandler
         );
@@ -144,7 +144,7 @@ export default class ZeeguuRequests {
      */
     static post (endpoint, requestData, responseHandler = function() {}) {
         $.post(
-            ZEEGUU_SERVER + endpoint + "?session=" + this.session(),
+            ZEEGUU_API_URL + endpoint + "?session=" + this.session(),
             requestData,
             responseHandler
         );
